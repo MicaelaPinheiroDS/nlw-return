@@ -28,8 +28,24 @@ body{
     font-size: 1.6rem;
     overflow:overlay;
 }
-p{
+section{
+    margin-bottom: 10rem;
+}
+h1, h2{
+    color: var(--headline);
+}
+h4{
+    color: var(--brand);
+    
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+}
+p, span{
     color: var(--paragraph);
+    line-height: 150%;
 }
 .wraper{
     width: 37.5rem;
@@ -37,8 +53,26 @@ p{
     margin-inline: auto;   
     
 }
+.contact-button{
+    margin-top: 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-inline: auto;
+
+    padding: 1.6rem 3.2rem;
+    border-radius: 4rem;
+
+    background: var(--brand);
+
+}
+.contact-button span{
+    color:white;
+    font-size: bold;
+    font-weight: 1.4rem;
+}
 /*--------------------navigation sttings--------------------------*/
-header{
+#headerNav{
     position: fixed;
     top: 0;
     left: 0;
@@ -98,7 +132,7 @@ nav {
     padding: 1.6rem 3.2rem;
     border-radius: 4rem;
 }
-.hidden-menu ul:last-child{
+.social-media{
     margin-top: 8rem;
     display: flex;
     justify-content: center;
@@ -106,8 +140,8 @@ nav {
 }
 
 /*-----------------------home page--------------------------------*/
-#home{
-    padding-top: 4.1rem;
+#home h4{
+    margin-top: calc(var(--header-height) + 4rem);
 }
 #home::before{
     content: "";
@@ -120,17 +154,7 @@ nav {
     left: 0;
     z-index:-1;
 }
-#home h4{
-    color: var(--brand);
-    
-    text-transform: uppercase;
-    margin-top: calc(var(--header-height) + 4rem);
-    font-size: 1.4rem;
-    line-height: 150%;
-    letter-spacing: 0.08em;
-}
 #home h1{
-    margin-top: 1.6rem;
     font-size: 3.4rem;
     line-height: 130%;
     
@@ -139,25 +163,6 @@ nav {
 #home p{
     margin-top: 2.4rem;
     font-size: 1.8rem;
-    line-height: 150%;
-}
-#home button{
-    margin-top: 3.2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    margin-inline: auto;
-
-    padding: 1.6rem 3.2rem;
-    border-radius: 4rem;
-
-    background: var(--brand);
-
-}
-#home button span{
-    color:white;
-    font-size: bold;
-    font-weight: 1.4rem;
 }
 #home img{
     display: block;
@@ -169,6 +174,8 @@ nav {
 #home .stats{
     background: var(--brand-beige);
     border: 1px solid var(--brand-light);
+    border-radius: 0.6rem;
+
     padding: 4rem 7.2rem;
 
     display: flex;
@@ -182,5 +189,101 @@ nav {
 }
 #home .stats p{
     color: var(--brand);
-    line-height: 150%;
+}
+/*-----------------------services------------------------*/
+#services main{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+#services h1{
+    margin-bottom: 6rem;
+    line-height: 3.9rem;
+}
+#services h2{
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+    width: 28.3rem;
+}
+#services div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    padding: 2.4rem;
+
+    border: 1px solid var(--brand-light);
+    border-radius: 0.6rem;
+}
+:where(#services, #about) h2,
+:where(#services, #about) p, 
+#contact h1{
+    text-align: left;
+}
+:is(#about, #contact) img{
+    width: 32.2rem;
+    margin: 6rem 0 10rem;
+}
+#about h1{
+    margin-bottom: 2.4rem;
+    text-align: left;
+}
+#contact h1{
+    margin-bottom: 3.2rem;
+    line-height: 3.9rem;
+    font-size: 3rem;
+}
+#contact{
+    align-items: flex-start;
+}
+#contact, .contact-status{
+    display: flex;
+    flex-direction: column;
+
+}
+.contact-status{
+    gap: 1.6rem;
+}
+#contact .contact-stats{
+    display: flex;
+    gap: 0.8rem;
+}
+#contact button{
+    margin-inline: 0;
+}
+footer{
+    background: var(--brand);
+    position: absolute;
+    left: 0;
+    height: 28.5rem;
+    width: 100vw;
+    padding: 6rem 2.6rem;
+
+}
+footer p {
+    color: white;
+    text-align: left;
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+}
+.footer-content div p:first-child{
+   margin-bottom: 1.2rem;
+}
+.footer-content .social-media{
+    margin-top: 0;
+}
+#backToTopButton{
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+}
+#backToTopButton.show{
+    opacity: 1;
+    visibility:visible;
 }
