@@ -1,0 +1,186 @@
+/*----------------------------default settings--------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    text-decoration: none;
+    list-style: none;
+
+    background: none;
+    box-sizing: border-box;
+
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+
+}
+:root{
+    font-size: 62.5%;
+    --brand: hsl(170, 100%, 26%);
+    --brand-light: hsl(148, 23%, 89%);
+    --brand-beige: hsl(39, 100%, 97%);
+    --brand-hover: hsl(170, 100%, 14%);
+    --paragraph: hsla(210, 9%, 31%);
+    --headline: hsl(210, 11%, 15%);
+    --header-height:  7.2rem;
+}
+body{
+    font-size: 1.6rem;
+    overflow:overlay;
+}
+p{
+    color: var(--paragraph);
+}
+.wraper{
+    width: 37.5rem;
+    padding-inline: 2.4rem;
+    margin-inline: auto;   
+    
+}
+/*--------------------navigation sttings--------------------------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+nav {   
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    padding: 1.6rem 2.4rem;
+}
+.show-menu{
+    overflow: hidden;
+}
+.show-menu .hidden-menu{
+    display: block;
+}
+.scroll{
+    background: var(--brand);
+}
+:is(.scroll, .show-menu) nav > svg:first-child path{
+    fill: white;
+}
+:is(.scroll, .show-menu) nav svg:last-child path{
+    stroke: white;
+}
+.hidden-menu{
+    display: none;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--brand);
+}
+.hidden-menu ul:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    margin-top: 13.2rem;
+}
+.hidden-menu ul:first-child li a{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: white;
+}
+.hidden-menu ul:first-child li:last-child a{
+    background: white;
+    color: var(--brand);
+
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+
+    padding: 1.6rem 3.2rem;
+    border-radius: 4rem;
+}
+.hidden-menu ul:last-child{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+/*-----------------------home page--------------------------------*/
+#home{
+    padding-top: 4.1rem;
+}
+#home::before{
+    content: "";
+    width: 100%;
+    height: 108rem;
+    background: var(--brand-light);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+#home h4{
+    color: var(--brand);
+    
+    text-transform: uppercase;
+    margin-top: calc(var(--header-height) + 4rem);
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+}
+#home h1{
+    margin-top: 1.6rem;
+    font-size: 3.4rem;
+    line-height: 130%;
+    
+    color: var(--headline);
+}
+#home p{
+    margin-top: 2.4rem;
+    font-size: 1.8rem;
+    line-height: 150%;
+}
+#home button{
+    margin-top: 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-inline: auto;
+
+    padding: 1.6rem 3.2rem;
+    border-radius: 4rem;
+
+    background: var(--brand);
+
+}
+#home button span{
+    color:white;
+    font-size: bold;
+    font-weight: 1.4rem;
+}
+#home img{
+    display: block;
+    margin-inline: auto;
+    margin-top: 6rem;
+    width: 26.164rem;
+    height: 34.2rem;
+}
+#home .stats{
+    background: var(--brand-beige);
+    border: 1px solid var(--brand-light);
+    padding: 4rem 7.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+#home .stats h2{
+    font-size: 4.8rem;
+    line-height: 130%;
+    color: var(--paragraph);
+}
+#home .stats p{
+    color: var(--brand);
+    line-height: 150%;
+}
