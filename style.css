@@ -48,7 +48,7 @@ p, span{
     line-height: 150%;
 }
 .wraper{
-    width: 37.5rem;
+    max-width: 37.5rem;
     padding-inline: 2.4rem;
     margin-inline: auto;   
     
